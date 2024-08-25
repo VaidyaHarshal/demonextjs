@@ -1,3 +1,13 @@
-export default function Home() {
-  return <h1>Hello</h1>;
-}
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
