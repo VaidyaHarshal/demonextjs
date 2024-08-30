@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  @apply bg-gray-100 text-gray-900;
-} */
-
 html,
 body {
   background-color: #1e293b; /* bg-slate-900 */

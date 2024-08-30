@@ -1,6 +1,7 @@
 import React from "react";
 import fetchData from "../../utils/fetchData";
 import dynamic from "next/dynamic";
+import "../../styles/globals.css";
 
 const ItemDetail = dynamic(() => import("@/components/ItemDetail"), {
   ssr: false,
