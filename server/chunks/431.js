@@ -1,0 +1,1 @@
+"use strict";exports.id=431,exports.ids=[431],exports.modules={6431:(e,t,r)=>{r.r(t),r.d(t,{default:()=>a});var s=r(997);function a(){return s.jsx("footer",{className:"w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 mt-8",children:s.jsx("p",{className:"text-center",children:"\xa9 2024 Amazing Posts Explorer | ❤️ Made By Harshal Vaidya"})})}}};
