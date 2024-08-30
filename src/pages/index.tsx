@@ -14,9 +14,9 @@ const ItemList = dynamic(() => import("@/components/ItemList"), {
   loading: () => <p>Loading Item List...</p>,
 });
 
-const Pagination = dynamic(() => import("@/components/Pagination"), {
-  ssr: false,
-});
+// const Pagination = dynamic(() => import("@/components/Pagination"), {
+//   ssr: false,
+// });
 
 const HomePage = ({
   items,
@@ -29,12 +29,12 @@ const HomePage = ({
   const [data, setData] = useState(items);
   const [isSearching, setIsSearching] = useState(false);
 
-  const handlePagination = async (newPage: number) => {
-    const newData = await fetchData(newPage);
-    setData(newData);
-    setPage(newPage);
-    window.scrollTo(0, 0);
-  };
+  // const handlePagination = async (newPage: number) => {
+  //   const newData = await fetchData(newPage);
+  //   setData(newData);
+  //   setPage(newPage);
+  //   window.scrollTo(0, 0);
+  // };
 
   const handleSearch = async (searchTerm: string) => {
     if (searchTerm.trim() === "") {
@@ -57,12 +57,12 @@ const HomePage = ({
       <main className="flex-grow container mx-auto p-6">
         <Search onSearch={handleSearch} />
         <ItemList items={data} />
-        <Pagination
+        {/* <Pagination
           currentPage={page}
           totalPages={totalPages}
           onPageChange={handlePagination}
           isSearching={isSearching}
-        />
+        /> */}
       </main>
       <Footer />
     </div>
@@ -70,13 +70,11 @@ const HomePage = ({
 };
 
 export const getStaticProps = async () => {
-  const items = await fetchData(1);
-  const totalPages = 10;
+  const items = await fetchData();
 
   return {
     props: {
       items,
-      totalPages,
     },
   };
 };

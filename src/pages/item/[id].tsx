@@ -17,7 +17,7 @@ const ItemDetailPage = ({ item }: { item: any }) => {
 };
 
 export async function getStaticPaths() {
-  const items = await fetchData(1);
+  const items = await fetchData();
   const paths = items.map((item: any) => ({
     params: { id: item.id.toString() },
   }));
