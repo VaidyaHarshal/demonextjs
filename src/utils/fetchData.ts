@@ -1,4 +1,4 @@
-const fetchData = async (pageOrId: number, isDetail = false) => {
+const fetchData = async (pageOrId?: number | string, isDetail = false) => {
   const url = isDetail
     ? `https://jsonplaceholder.typicode.com/posts/${pageOrId}`
     : `https://jsonplaceholder.typicode.com/posts?_page=${pageOrId}&_limit=12`;

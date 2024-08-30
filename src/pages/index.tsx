@@ -69,7 +69,7 @@ const HomePage = ({
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const items = await fetchData(1);
   const totalPages = 10;
 
