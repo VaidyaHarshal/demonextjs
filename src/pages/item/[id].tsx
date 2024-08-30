@@ -17,16 +17,14 @@ const ItemDetailPage = ({ item }: { item: any }) => {
 };
 
 export async function getStaticPaths() {
-  // Fetch the list of items to generate paths
-  const items = await fetchData(); // Fetch all items or a list of item IDs
-
+  const items = await fetchData(1);
   const paths = items.map((item: any) => ({
-    params: { id: item.id.toString() }, // Ensure id is a string
+    params: { id: item.id.toString() },
   }));
 
   return {
     paths,
-    fallback: false, // or 'blocking' or 'true' depending on your use case
+    fallback: "blocking",
   };
 }
 
